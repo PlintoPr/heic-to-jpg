@@ -11,13 +11,22 @@ import { isDuplicateFile, validateFile } from "./utils/validateFile";
 import { convertHeicToJpg } from "./utils/convertHeic";
 import { downloadBlob } from "./utils/downloadFile";
 
+const MAX_FILES = 20;
+
 function App() {
   const [files, setFiles] = useState([]);
   const [isConverting, setIsConverting] = useState(false);
 
   const handleFilesSelected = (newFiles) => {
     setFiles((prevFiles) => {
-      const mappedFiles = newFiles.map((file, index) => {
+      if (prevFiles.length >= MAX_FILES) {
+        return prevFiles;
+      }
+
+      const remainingSlots = MAX_FILES - prevFiles.length;
+      const limitedFiles = newFiles.slice(0, remainingSlots);
+
+      const mappedFiles = limitedFiles.map((file, index) => {
         const duplicate = isDuplicateFile(file, prevFiles);
         const validation = duplicate
           ? {
@@ -141,6 +150,13 @@ function App() {
 
     if (isConverting) {
       return { type: "info", message: status.converting };
+    }
+
+    if (files.length >= MAX_FILES) {
+      return {
+        type: "warning",
+        message: status.limitReached,
+      };
     }
 
     const doneCount = files.filter((file) => file.status === "done").length;

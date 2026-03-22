@@ -16,8 +16,10 @@ const appText = {
     ready: "Your files are ready for conversion.",
     converting: "Converting your images... please wait.",
     success: "Conversion complete. Your JPG files are ready.",
-    mixed: "Some files were converted successfully, but others could not be processed.",
+    mixed:
+      "Some files were converted successfully, but others could not be processed.",
     error: "No files could be converted. Please try again.",
+    limitReached: "You can upload up to 20 files at a time.",
   },
   results: {
     title: "Your files",
