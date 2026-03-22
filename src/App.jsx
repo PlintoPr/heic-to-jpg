@@ -23,7 +23,7 @@ function App() {
           ? {
               valid: false,
               code: "duplicate_file",
-              message: "Este archivo ya fue añadido a la lista.",
+              message: "This file has already been added to the list.",
             }
           : validateFile(file);
 

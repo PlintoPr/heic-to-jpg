@@ -1,7 +1,7 @@
 function Faq() {
   return (
     <section className="faq-section">
-      <h2>Frequently asked questions</h2>
+      <h2>Frequently Asked Questions</h2>
 
       <div className="faq-list">
         <details className="faq-item">
@@ -13,7 +13,7 @@ function Faq() {
         </details>
 
         <details className="faq-item">
-          <summary>Why do iPhone photos use HEIC format?</summary>
+          <summary>Why do iPhone photos use the HEIC format?</summary>
           <p>
             Apple uses HEIC because it can keep good image quality while using
             less storage space than older formats like JPG.
@@ -39,8 +39,8 @@ function Faq() {
         <details className="faq-item">
           <summary>Can I open HEIC files on Windows?</summary>
           <p>
-            Sometimes yes, but many Windows systems need extra support or apps
-            to open HEIC files properly. JPG is much easier to use everywhere.
+            Sometimes, but many Windows systems require additional support or apps
+            to open HEIC files properly.
           </p>
         </details>
 
@@ -48,7 +48,7 @@ function Faq() {
           <summary>What is the difference between HEIC and HEIF?</summary>
           <p>
             HEIF is the container format, while HEIC is one of the most common
-            image file variations built on that format.
+            image formats based on it.
           </p>
         </details>
 

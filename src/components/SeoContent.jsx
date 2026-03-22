@@ -2,7 +2,7 @@ function SeoContent() {
   return (
     <section className="seo-content">
       <details className="seo-block">
-        <summary>What is a HEIC file?</summary>
+        <summary>What is a HEIC file and why is it used?</summary>
         <div className="seo-block-content">
           <p>
             HEIC is an image format used by Apple devices such as iPhones and
@@ -10,7 +10,7 @@ function SeoContent() {
             storage space than older formats like JPG.
           </p>
           <p>
-            The problem is that HEIC files are not always easy to open on
+            The main issue is that HEIC files are not always easy to open on
             Windows PCs, older software, or some websites. That is why many
             people need a quick way to convert HEIC images into JPG files.
           </p>

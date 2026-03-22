@@ -51,7 +51,7 @@ function UploadZone({ onFilesSelected }) {
     >
       <div className="upload-zone-inner">
         <p className="upload-label">{title}</p>
-        <h2>Arrastra tus fotos aquí</h2>
+        <h2>Drag and drop your HEIC images here</h2>
         <p className="upload-description">{description}</p>
 
         <label className="primary-button">

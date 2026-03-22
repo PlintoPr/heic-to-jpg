@@ -25,7 +25,7 @@ export function validateFile(file) {
     return {
       valid: false,
       code: "missing_file",
-      message: "No se ha podido leer el archivo seleccionado.",
+      message: "The selected file could not be read.",
     };
   }
 
@@ -33,7 +33,7 @@ export function validateFile(file) {
     return {
       valid: false,
       code: "invalid_extension",
-      message: "El archivo no tiene una extensión compatible. Usa .heic o .heif.",
+      message: "This file does not have a supported extension. Please use .heic or .heif.",
     };
   }
 
@@ -41,7 +41,7 @@ export function validateFile(file) {
     return {
       valid: false,
       code: "invalid_mime",
-      message: "El tipo de archivo no parece compatible con HEIC/HEIF.",
+      message: "This file type does not appear to be compatible with HEIC or HEIF.",
     };
   }
 
@@ -49,14 +49,14 @@ export function validateFile(file) {
     return {
       valid: false,
       code: "file_too_large",
-      message: "El archivo supera el tamaño máximo permitido de 20 MB.",
+      message: "This file exceeds the maximum allowed size of 20 MB.",
     };
   }
 
   return {
     valid: true,
     code: "valid",
-    message: "Archivo listo para convertir.",
+    message: "File ready for conversion.",
   };
 }
 

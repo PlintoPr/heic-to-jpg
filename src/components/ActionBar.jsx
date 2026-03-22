@@ -15,7 +15,7 @@ function ActionBar({
         onClick={onConvertAll}
         disabled={!hasReadyFiles || isConverting}
       >
-        {isConverting ? "Convirtiendo..." : "Convertir a JPG"}
+        {isConverting ? "Converting..." : "Convert to JPG"}
       </button>
 
       <button
@@ -24,7 +24,7 @@ function ActionBar({
         onClick={onDownloadAll}
         disabled={!hasDoneFiles || isConverting}
       >
-        Descargar todos
+        Download all
       </button>
 
       <button
@@ -33,7 +33,7 @@ function ActionBar({
         onClick={onClearAll}
         disabled={!hasFiles || isConverting}
       >
-        Limpiar lista
+        Clear list
       </button>
     </section>
   );

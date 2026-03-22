@@ -4,15 +4,15 @@ function FileCard({ file, onDownload }) {
   const getStatusLabel = () => {
     switch (file.status) {
       case "ready":
-        return "listo";
+        return "Ready";
       case "invalid":
-        return "inválido";
+        return "Invalid file";
       case "converting":
-        return "convirtiendo";
+        return "Converting...";
       case "done":
-        return "convertido";
+        return "Done";
       case "error":
-        return "error";
+        return "Error";
       default:
         return file.status;
     }
@@ -25,7 +25,7 @@ function FileCard({ file, onDownload }) {
           {file.resultUrl ? (
             <img
               src={file.resultUrl}
-              alt={`Vista previa de ${file.outputName}`}
+              alt={`Preview of ${file.outputName}`}
               className="file-preview-image"
             />
           ) : (
@@ -44,7 +44,7 @@ function FileCard({ file, onDownload }) {
                 {file.validationMessage || file.errorMessage}
               </p>
               {file.outputName ? (
-                <p className="file-output-name">Salida: {file.outputName}</p>
+                <p className="file-output-name">Output: {file.outputName}</p>
               ) : null}
             </div>
 
@@ -60,7 +60,7 @@ function FileCard({ file, onDownload }) {
                 className="secondary-button"
                 onClick={() => onDownload(file)}
               >
-                Descargar JPG
+                Download JPG
               </button>
             </div>
           ) : null}

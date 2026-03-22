@@ -11,13 +11,13 @@ export async function convertHeicToJpg(file) {
     const resultBlob = Array.isArray(converted) ? converted[0] : converted;
 
     if (!(resultBlob instanceof Blob)) {
-      throw new Error("La conversión no devolvió un archivo válido.");
+      throw new Error("The conversion did not return a valid file.");
     }
 
     return resultBlob;
   } catch (error) {
     throw new Error(
-      "No se pudo convertir este archivo HEIC. Puede estar dañado o no ser compatible."
+      "This HEIC file could not be converted. It may be corrupted or not supported."
     );
   }
 }
