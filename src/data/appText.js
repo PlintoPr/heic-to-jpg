@@ -1,8 +1,10 @@
 const appText = {
   header: {
-    title: "HEIC to JPG",
-    subtitle: "Convert HEIC images to JPG instantly, right in your browser.",
-    trustLine: "No uploads. 100% private. Fast and secure.",
+    title: "HEIC to JPG Converter",
+    subtitle:
+      "Convert HEIC images to JPG online for free. Fast, private and no uploads required.",
+    trustLine:
+      "Everything happens locally in your browser. Your files are never uploaded.",
   },
   upload: {
     title: "Upload your HEIC images",
